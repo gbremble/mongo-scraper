@@ -142,7 +142,7 @@ app.post('/api/articles/:id', (req, res) => {
 // HTML route to return a 404 for unmatched routes
 app.get('*', (req, res) => {
     res.render('404');
-})
+});
 
 // start the server
 app.listen(PORT, () => {
