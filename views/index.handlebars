@@ -1,11 +1,14 @@
-{{#if article}} {{#each article}}
 <div class="row">
-    <div class="col-12">
-        <div class="card" style="width: 18rem;">
+    {{#if articles}} {{#each articles}}
+    <div class="col-md-4">
+        <div class="card mr-3 mb-3" style="width: 22rem;">
             <div class="card-body">
                 <h5 class="card-title">{{this.title}}</h5>
                 <p class="card-text">{{this.excerpt}}</p>
                 <a href="{{this.link}}" target="_blank" class="card-link">Read more…</a>
+
+            </div>
+            <div class="card-footer text-muted">
                 <button type="button" class="btn btn-sm btn-outline-info" data-toggle="modal"
                     data-target="#noteModal">
                     Add Note
@@ -13,14 +16,13 @@
             </div>
         </div>
     </div>
-</div>
-{{/each}} {{else}}
-<div class="panel panel-default text-center">
-    <div class="panel-body">
-        <h4>No articles found.</h4>
+
+    {{/each}} {{else}}
+    <div class="alert alert-info" role="alert">
+        No articles found. <a href="/scrape" class="alert-link">Check for news?</a>
     </div>
+    {{/if}}
 </div>
-{{/if}}
 
 <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="noteModalLabel"
     aria-hidden="true">
