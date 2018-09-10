@@ -1,0 +1,23 @@
+* {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    /* font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', sans-serif; */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+.btn {
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
