@@ -1,22 +1,20 @@
 <div class="row">
     {{#if articles}} {{#each articles}}
-    <div class="col-md-4">
-        <div class="card mr-3 mb-3" style="width: 22rem;">
+    <div class="col-12">
+        <div class="card mx-auto mb-3 w-75">
             <div class="card-body">
                 <h5 class="card-title">{{this.title}}</h5>
                 <p class="card-text">{{this.excerpt}}</p>
-                <a href="{{this.link}}" target="_blank" class="card-link">Read more…</a>
-
-            </div>
-            <div class="card-footer text-muted">
-                <button type="button" class="btn btn-sm btn-outline-info" data-toggle="modal"
+                <a href="{{this.link}}" target="_blank" class="btn btn-sm btn-outline-info card-link">
+                    Read More
+                </a>
+                <button type="button" class=" card-link btn btn-sm btn-info" data-toggle="modal"
                     data-target="#noteModal">
                     Add Note
                 </button>
             </div>
         </div>
     </div>
-
     {{/each}} {{else}}
     <div class="alert alert-info" role="alert">
         No articles found. <a href="/scrape" class="alert-link">Check for news?</a>
